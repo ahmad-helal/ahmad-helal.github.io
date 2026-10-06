@@ -1,15 +1,183 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Home</title>
-    <style>
-      h1 {
-        text-align: center;
-        line-height: 5;
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ahmed Helal</title>
+    <meta name="description" content="Ahmed Helal — personal portfolio: about, skills, projects and contact." />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/66534052?v=4" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Apply saved theme before paint to avoid a flash -->
+    <script>
+      try {
+        const t = localStorage.getItem("theme");
+        if (t) document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
   </head>
   <body>
-    <h1>Hi there 👋!</h1>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a href="#top" class="logo">AH<span>.</span></a>
+        <nav id="menu" class="menu">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+          <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ===== HERO ===== -->
+      <section class="hero container">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/66534052?v=4" alt="Ahmed Helal" />
+        <div>
+          <p class="eyebrow">Hi there 👋, I'm</p>
+          <h1>Ahmed Helal</h1>
+          <!-- EDIT: your role / tagline -->
+          <p class="tagline">Software developer who enjoys building clean, useful things for the web.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary">See my work</a>
+            <a href="#contact" class="btn">Get in touch</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section id="about" class="section container reveal">
+        <h2>About me</h2>
+        <!-- EDIT: a few sentences about yourself -->
+        <p>
+          I'm a developer who likes turning ideas into simple, well-built software. I care about
+          readable code, good user experience, and always learning something new.
+        </p>
+        <p>
+          When I'm not coding, you'll find me exploring new tools, reading, or working on side projects.
+        </p>
+        <ul class="facts">
+          <li><strong>📍</strong> Location: Your City</li>
+          <li><strong>💼</strong> Open to: new opportunities</li>
+          <li><strong>🌐</strong> Languages: Arabic, English</li>
+        </ul>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section id="skills" class="section container reveal">
+        <h2>Skills</h2>
+        <!-- EDIT: add/remove groups and chips -->
+        <div class="skills-grid">
+          <div class="card">
+            <h3>Languages</h3>
+            <ul class="chips">
+              <li>JavaScript</li><li>Python</li><li>HTML</li><li>CSS</li><li>SQL</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Frameworks</h3>
+            <ul class="chips">
+              <li>React</li><li>Node.js</li><li>Express</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Tools</h3>
+            <ul class="chips">
+              <li>Git</li><li>GitHub</li><li>VS Code</li><li>Linux</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section id="projects" class="section container reveal">
+        <h2>Projects</h2>
+        <!-- EDIT: one <article class="card project"> per project.
+             data-tags controls the filter buttons (space-separated). -->
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="tool">Tools</button>
+        </div>
+        <div class="projects-grid">
+          <article class="card project" data-tags="web">
+            <div class="project-icon">🌐</div>
+            <h3>Personal Website</h3>
+            <p>This site — a lightweight portfolio built with plain HTML, CSS and JavaScript, hosted on GitHub Pages.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/ahmad-helal/ahmad-helal.github.io" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </article>
+          <article class="card project" data-tags="web">
+            <div class="project-icon">📝</div>
+            <h3>Project Two</h3>
+            <p>Short description of what this project does and the problem it solves.</p>
+            <ul class="tags"><li>React</li><li>API</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+              <a href="#" target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </article>
+          <article class="card project" data-tags="tool">
+            <div class="project-icon">⚙️</div>
+            <h3>Project Three</h3>
+            <p>A small utility or script — explain what it automates and why it's useful.</p>
+            <ul class="tags"><li>Python</li><li>CLI</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="experience" class="section container reveal">
+        <h2>Experience</h2>
+        <!-- EDIT: newest first -->
+        <ol class="timeline">
+          <li>
+            <span class="when">2023 — Present</span>
+            <h3>Software Developer · Company Name</h3>
+            <p>What you work on, technologies you use, and an achievement you're proud of.</p>
+          </li>
+          <li>
+            <span class="when">2021 — 2023</span>
+            <h3>Junior Developer · Previous Company</h3>
+            <p>Responsibilities and things you learned.</p>
+          </li>
+          <li>
+            <span class="when">2017 — 2021</span>
+            <h3>B.Sc. Computer Science · University Name</h3>
+            <p>Relevant coursework, projects or honors.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="section container reveal contact">
+        <h2>Get in touch</h2>
+        <p>Have a question, an opportunity, or just want to say hi? My inbox is open.</p>
+        <!-- EDIT: replace the email and links -->
+        <a class="btn primary" href="mailto:you@example.com">Say hello ✉️</a>
+        <div class="socials">
+          <a href="https://github.com/ahmad-helal" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Ahmed Helal · Built with HTML, CSS &amp; JS</p>
+        <a href="#top" class="to-top" aria-label="Back to top">↑ Top</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
